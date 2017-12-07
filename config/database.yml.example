@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+
+development:
+  <<: *default
+  database: actioncable_chat_dev
+
+test:
+  <<: *default
+  database: actioncable_chat_test
+  username:
+
+production:
+  <<: *default
+  database: actioncable_chat_prod
+  username:
